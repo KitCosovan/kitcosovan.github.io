@@ -1,0 +1,49 @@
+@import '../../variables.scss';
+
+.skills {
+    margin-top: 122px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    &_name {
+        font-size: 32px;
+        font-weight: 500;
+        color: $text-neutral;
+        span {
+            color: $text-bold;
+        }
+    }
+    &_divider {
+        margin-left: 10px;
+        width: 600px;
+        height: 2px;
+        background-color: $text-bold;
+    }
+    &_list {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        grid-template-rows: repeat(2, 290px);
+        column-gap: 40px;
+        row-gap: 20px;
+    }
+    &_item {
+        padding: 30px;
+        border: solid 1px $text-regular;
+        color: $text-neutral;
+        font-size: 12px;
+        font-weight: 100;
+        &__icon {
+            height: 65px;
+        }
+        &__title {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 500;
+            color: $text-bold;
+        }
+        &__desc {
+            margin-top: 20px;
+        }
+    }
+}

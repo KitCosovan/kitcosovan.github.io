@@ -1,0 +1,79 @@
+@import '../../variables.scss';
+
+.mainScreen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    column-gap: 143px;
+    margin-top: 102px;
+    &_info {
+        width: 600px;
+    }
+    &_title {
+        margin-top: 74px;
+        font-size: 32px;
+        font-weight: 900;
+        color: $text-neutral;
+        span {
+            color: $text-bold;
+        }
+    }
+    &_subtitle {
+        margin-top: 32px;
+        font-size: 16px;
+        font-weight: 500;
+        color: $text-regular;
+        opacity: 0.7;
+    }
+    &_btn {
+        margin-top: 24px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 300;
+        color: $text-neutral;
+
+        width: 150px;
+        height: 40px;
+        background-color: transparent;
+        border: solid 1px $text-bold;
+        transition: all 0.5s ease-out;
+        &:hover {
+            background-color: #fda32678;
+        }
+    }
+    &_images {
+        position: relative;
+    }
+    &_shape {
+        position: absolute;
+        top: 80px;
+        left: 15px;
+        z-index: -1;
+    }
+    &_dots {
+        position: absolute;
+        top: 205px;
+        right: 25px;
+    }
+    &_ocupation {
+        position: relative;
+        order: 1;
+        border: solid 1px $text-regular;
+        color: $text-regular;
+        width: 432px;
+        height: 20px;
+        padding: 10px 25px;
+        span {
+            color: $text-neutral;
+        }
+        &::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background-color: $text-bold;
+            position: absolute;
+            top: 13px;
+            left: 5px;
+        }
+    }
+}
