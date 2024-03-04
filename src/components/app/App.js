@@ -5,6 +5,7 @@ import MainScreen from '../mainScreen/MainScreen';
 import ProjectsList from '../projectsList/ProjectsList';
 import Skills from '../skills/Skills';
 import About from '../about/About';
+import ContactForm from '../contactForm/ContactForm';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <ProjectsList/>
       <Skills/>
       <About/>
+      <ContactForm/>
     </div>
   )
 }
