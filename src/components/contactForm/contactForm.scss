@@ -126,3 +126,125 @@
         }
     }
 }
+
+@media (max-width: 576px) {
+    .contacts {
+        &_divider {
+            width: 117px;
+        }
+        &_connect {
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &_social {
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding-left: 0;
+            padding-top: 0;
+            &__item {
+                width: 90px;
+                height: 70px;
+                padding-top: 15px;
+            }
+        }
+        &__form {
+            width: 100%;
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: 0;
+        }
+        &__input {
+            width: 100%;
+            input {
+                width: 86%;
+                height: 50px;
+            }
+        }
+        &__textarea {
+            width: 100%;
+            textarea {
+                width: 86%;
+                height: 150px;
+            }
+        }
+        &_btn {
+            width: 100%;
+            height: 50px;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .contacts {
+        &_divider {
+            width: 190px;
+        }
+        &_connect {
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &_social {
+            width: 100%;
+            flex-wrap: wrap;
+            padding-left: 0;
+            padding-top: 0;
+            &__item {
+                width: 90px;
+                height: 70px;
+                padding-top: 15px;
+            }
+        }
+        &__form {
+            width: 100%;
+            margin-top: 50px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .contacts {
+        &_divider {
+            width: 360px;
+        }
+        &_connect {
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &_social {
+            width: 100%;
+            flex-wrap: wrap;
+            padding-left: 0;
+            padding-top: 0;
+            &__item {
+                width: 90px;
+                height: 75px;
+                padding-top: 15px;
+            }
+        }
+        &__form {
+            width: 100%;
+            margin-top: 50px;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .contacts {
+        &_social {
+            width: 310px;
+            row-gap: 0;
+            padding-top: 30px;
+            padding-left: 50px;
+            &__item {
+                width: 125px;
+                height: 115px;
+                padding-top: 15px;
+            }
+        }
+    }
+}

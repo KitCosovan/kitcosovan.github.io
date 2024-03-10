@@ -40,3 +40,60 @@
         }
     }
 }
+
+@media (max-width: 576px) {
+    .about {
+        &_divider {
+            width: 155px;
+        }
+        &_img {
+            margin-left: 0;
+            img {
+                width: 290px;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .about {
+        &_divider {
+            width: 190px;
+        }
+        &_img {
+            margin-left: 90px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .about {
+        &_divider {
+            width: 360px;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .about {
+        &_text {
+            width: 460px;
+        }
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .about {
+        &_text {
+            width: 640px;
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    .about {
+        &_img {
+            margin-left: 281px;
+        }
+    }
+}

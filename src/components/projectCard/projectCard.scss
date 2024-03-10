@@ -7,6 +7,9 @@
     &_img {
         border-bottom: solid 1px $text-regular;
         height: 200px;
+        img {
+            width: 100%;
+        }
     }
     &_stack {
         height: 20px;
@@ -78,5 +81,21 @@
         &:hover {
             background-color: #ffffff3f;
         }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .project {
+        align-self: auto;
+        width: 320px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .project {
+        width: 300px;
+    }
+    .wrap_view {
+        margin-left: 62px;
     }
 }

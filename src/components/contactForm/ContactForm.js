@@ -1,6 +1,28 @@
 import './contactForm.scss';
 
+import { useMediaQuery } from 'react-responsive';
+
 const ContactForm = () => {
+
+    const is576Max = useMediaQuery({ query: '(max-width: 576px)' });
+    const is576Min = useMediaQuery({ query: '(min-width: 576px)' });
+    const is767Max = useMediaQuery({ query: '(max-width: 768px)' })
+    const is768Min = useMediaQuery({ query: '(min-width: 768px)' });
+    const is992Max = useMediaQuery({ query: '(max-width: 992px)' });
+    let svgSize = '100px';
+
+    if (is768Min && is992Max) {
+        svgSize = '60px';
+    }
+
+    if (is576Min && is767Max) {
+        svgSize = '50px'
+    }
+
+    if (is576Max) {
+        svgSize = '50px'
+    }
+
     return (
         <div className="contacts">
             <div className="contacts_title"><span>#</span>contacts</div>
@@ -9,7 +31,7 @@ const ContactForm = () => {
             <div className="contacts_connect">
                 <div className="contacts_social">
                     <div className="contacts_social__item">
-                        <svg fill="#FDA326" width="100px" height="100px" viewBox="0 0 32.00 32.00" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#000000" strokeWidth="0.00032" transform={{matrix: '1, 0, 0, 1, 0, 0', rotate: '0'}}>
+                        <svg fill="#FDA326" width={svgSize} height={svgSize} viewBox="0 0 32.00 32.00" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#000000" strokeWidth="0.00032" transform={{matrix: '1, 0, 0, 1, 0, 0', rotate: '0'}}>
                             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                             <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" stroke="#CCCCCC" strokeWidth="0.64"></g>
                             <g id="SVGRepo_iconCarrier">
@@ -19,7 +41,7 @@ const ContactForm = () => {
                         </svg>
                     </div>
                     <div className="contacts_social__item">
-                        <svg width="100px" height="100px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width={svgSize} height={svgSize} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                             <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                             <g id="SVGRepo_iconCarrier">
@@ -30,7 +52,7 @@ const ContactForm = () => {
                         </svg>
                     </div>
                     <div className="contacts_social__item">
-                        <svg width="100px" height="100px" viewBox="0 0 20 20" version="1.1" fill="#000000" stroke="#000000">
+                        <svg width={svgSize} height={svgSize} viewBox="0 0 20 20" version="1.1" fill="#000000" stroke="#000000">
                             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                             <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                             <g id="SVGRepo_iconCarrier">
@@ -45,7 +67,7 @@ const ContactForm = () => {
                         </svg>
                     </div>
                     <div className="contacts_social__item">
-                        <svg width="100px" height="100px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <svg width={svgSize} height={svgSize} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                             <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                             <g id="SVGRepo_iconCarrier">
