@@ -144,9 +144,14 @@
 
 @media (min-width: 1200px) {
     .mainScreen {
-        column-gap: 322px;
         &_info {
             width: 540px;
         }
+    }
+}
+
+@media (min-width: 1400px) {
+    .mainScreen {
+        column-gap: 322px;
     }
 }
