@@ -1,0 +1,41 @@
+@import '../../variables.scss';
+
+.caWrap {
+    margin-top: 90px;
+    &_title {
+        font-size: 32px;
+        font-weight: 500;
+        color: $text-neutral;
+        span {
+            color: $text-bold;
+        }
+    }
+    &_apps {
+        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 992px) {
+    .caWrap {
+        &_apps {
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .caWrap {
+        &_apps {
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+    }
+}

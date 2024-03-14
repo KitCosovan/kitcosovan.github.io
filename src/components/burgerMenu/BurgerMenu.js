@@ -2,7 +2,7 @@ import './burgerMenu.scss';
 
 import { useState } from 'react';
 
-const BurgerMenu = ( {handleSwitchVisible} ) => {
+const BurgerMenu = ({ handleSwitchVisible, handleItemClick, activeItem }) => {
 
     const [isActive, setIsActive] = useState(false);
 
@@ -25,8 +25,8 @@ const BurgerMenu = ( {handleSwitchVisible} ) => {
             </div>
             <div className={`burgerMenu_list ${menu_class}`}>
                 <ul className="burgerMenu_menu">
-                        <li className="burgerMenu_menu__item active"><span>#</span>home</li>
-                        <li className="burgerMenu_menu__item"><span>#</span>works</li>
+                        <li className={`burgerMenu_menu__item ${activeItem === 'home' ? 'active' : null}`} onClick={() => handleItemClick('home')}><span>#</span>home</li>
+                        <li className={`burgerMenu_menu__item ${activeItem === 'works' ? 'active' : null}`} onClick={() => handleItemClick('works')}><span>#</span>works</li>
                         <li className="burgerMenu_menu__item"><span>#</span>about-me</li>
                         <li className="burgerMenu_menu__item"><span>#</span>contacts</li>
                 </ul>
