@@ -36,8 +36,6 @@
       <div className="app">
         <div className="container">
           <HeaderMenu handleSwitchVisible={handleSwitchVisible} handleItemClick={handleListener} headerListener={headerListener}/>
-          {/* {headerListener.home && <HomePage isVisible={isVisible} />}
-          {headerListener.works && <WorksPage isVisible={isVisible} />} */}
           <TransitionGroup>
             {headerListener.home && (
               <CSSTransition key="home" timeout={500} classNames="fade">
