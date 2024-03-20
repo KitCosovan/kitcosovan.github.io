@@ -30,7 +30,7 @@ const App = () => {
                 </CSSTransition>
               } />
               <Route path='/works' element={
-                <CSSTransition key="home" timeout={500} classNames="fade">
+                <CSSTransition key="works" timeout={500} classNames="fade">
                   <WorksPage isVisible={isVisible} />
                 </CSSTransition>
               } />

@@ -83,15 +83,15 @@ const ContactForm = () => {
                 <form action="#" className="contacts__form">
                     <div className="contacts__input">
                         <input required name="name" id="name" type="text" />
-                        <label for="name">Your name</label>
+                        <label htmlFor="name">Your name</label>
                     </div>
                     <div className="contacts__input">
                         <input required name="email" id="email" type="email" />
-                        <label for="email">Your email</label>
+                        <label htmlFor="email">Your email</label>
                     </div>
                     <div className="contacts__textarea">
                         <textarea name="text" id="text"></textarea>
-                        <label for="text">Your message</label>
+                        <label htmlFor="text">Your message</label>
                     </div>
 
                     <button className="contacts_btn">Send me a message</button>
