@@ -1,57 +1,46 @@
-  import './App.css';
+import './App.css';
 
-  import { useState, useEffect } from 'react';
-  import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
-  import HeaderMenu from '../headerMenu/HeaderMenu';
-  import HomePage from '../homePage/HomePage';
-  import WorksPage from '../worksPage/WorksPage';
-  import Footer from '../footer/Footer';
+import HeaderMenu from '../headerMenu/HeaderMenu';
+import HomePage from '../pages/homePage/HomePage';
+import WorksPage from '../pages/worksPage/WorksPage';
+import Footer from '../footer/Footer';
 
-  const App = () => {
+const App = () => {
 
-    const [isVisible, setIsVisible] = useState(false);
-    const [headerListener, setHeaderListener] = useState({});
+  const [isVisible, setIsVisible] = useState(false);
 
-    useEffect(() => {
-      setHeaderListener({
-        home: true,
-        works: false
-      })
-    }, [])
+  const handleSwitchVisible = () => {
+    setIsVisible(!isVisible);
+  }
 
-    const handleListener = (item) => {
-      const newState = {
-        home: item === 'home',
-        works: item === 'works'
-      }
-      setHeaderListener(newState);
-    }
-
-    const handleSwitchVisible = () => {
-      setIsVisible(!isVisible);
-    }
-
-    return (
+  return (
+    <Router>
       <div className="app">
         <div className="container">
-          <HeaderMenu handleSwitchVisible={handleSwitchVisible} handleItemClick={handleListener} headerListener={headerListener}/>
+          <HeaderMenu handleSwitchVisible={handleSwitchVisible} />
           <TransitionGroup>
-            {headerListener.home && (
-              <CSSTransition key="home" timeout={500} classNames="fade">
-                <HomePage isVisible={isVisible} />
-              </CSSTransition>
-            )}
-            {headerListener.works && (
-              <CSSTransition key="works" timeout={500} classNames="fade">
-                <WorksPage isVisible={isVisible} />
-              </CSSTransition>
-            )}
+            <Routes>
+              <Route path='/' element={
+                <CSSTransition key="home" timeout={500} classNames="fade">
+                  <HomePage isVisible={isVisible} />
+                </CSSTransition>
+              } />
+              <Route path='/works' element={
+                <CSSTransition key="home" timeout={500} classNames="fade">
+                  <WorksPage isVisible={isVisible} />
+                </CSSTransition>
+              } />
+            </Routes>
           </TransitionGroup>
         </div>
         <Footer/>
       </div>
-    )
-  }
+    </Router>
+  )
+}
 
-  export default App;
+export default App;

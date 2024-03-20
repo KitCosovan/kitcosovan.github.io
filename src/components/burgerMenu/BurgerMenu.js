@@ -1,8 +1,9 @@
 import './burgerMenu.scss';
 
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
-const BurgerMenu = ({ handleSwitchVisible, handleItemClick, activeItem }) => {
+const BurgerMenu = ({ handleSwitchVisible }) => {
 
     const [isActive, setIsActive] = useState(false);
 
@@ -25,8 +26,8 @@ const BurgerMenu = ({ handleSwitchVisible, handleItemClick, activeItem }) => {
             </div>
             <div className={`burgerMenu_list ${menu_class}`}>
                 <ul className="burgerMenu_menu">
-                        <li className={`burgerMenu_menu__item ${activeItem === 'home' ? 'active' : null}`} onClick={() => handleItemClick('home')}><span>#</span>home</li>
-                        <li className={`burgerMenu_menu__item ${activeItem === 'works' ? 'active' : null}`} onClick={() => handleItemClick('works')}><span>#</span>works</li>
+                        <li className='burgerMenu_menu__item'><NavLink to={'/'} className={({isActive}) => isActive ? 'active' : ''}><span>#</span>home</NavLink></li>
+                        <li className='burgerMenu_menu__item'><NavLink to={'/works'} className={({isActive}) => isActive ? 'active' : ''}><span>#</span>works</NavLink></li>
                         <li className="burgerMenu_menu__item"><span>#</span>about-me</li>
                         <li className="burgerMenu_menu__item"><span>#</span>contacts</li>
                 </ul>

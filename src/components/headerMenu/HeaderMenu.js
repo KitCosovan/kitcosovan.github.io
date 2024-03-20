@@ -3,16 +3,11 @@ import logo from '../../img/logo_32.png';
 import BurgerMenu from '../burgerMenu/BurgerMenu';
 
 import { useMediaQuery } from 'react-responsive';
+import { NavLink } from 'react-router-dom';
 
-const HeaderMenu = ({ headerListener, handleSwitchVisible, handleItemClick }) => {
+const HeaderMenu = ({ handleSwitchVisible }) => {
 
     const is992Max = useMediaQuery({ query: '(max-width: 992px)' });
-
-    let activeItem = 'home';
-
-    if (headerListener.works) {
-        activeItem = 'works'
-    }
 
     return (
         <div className="menu">
@@ -21,12 +16,12 @@ const HeaderMenu = ({ headerListener, handleSwitchVisible, handleItemClick }) =>
                 <span>Kit Cosovan</span>
             </div>
             { (is992Max) ? (
-                    <BurgerMenu handleSwitchVisible={handleSwitchVisible} handleItemClick={handleItemClick} activeItem={activeItem}/>
+                    <BurgerMenu handleSwitchVisible={handleSwitchVisible} />
             ) : (
                 <div className="menu_info">
                     <ul className="menu_list">
-                        <li className={`menu_item ${activeItem === 'home' ? 'active' : ''}`} onClick={() => handleItemClick('home')}><span>#</span>home</li>
-                        <li className={`menu_item ${activeItem === 'works' ? 'active' : ''}`} onClick={() => handleItemClick('works')}><span>#</span>works</li>
+                        <li className='menu_item'><NavLink to={'/'} className={({isActive}) => isActive ? 'active' : ''}><span>#</span>home</NavLink></li>
+                        <li className='menu_item'><NavLink to={'/works'} className={({isActive}) => isActive ? 'active' : ''}><span>#</span>works</NavLink></li>
                         <li className="menu_item"><span>#</span>about-me</li>
                         <li className="menu_item"><span>#</span>contacts</li>
                     </ul>
