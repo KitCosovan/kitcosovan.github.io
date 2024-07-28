@@ -5,8 +5,9 @@ import css from '../../img/skills/css3.svg';
 import js from '../../img/skills/js.svg';
 import jquery from '../../img/skills/jquery.svg';
 import react from '../../img/skills/react.svg';
-import node from '../../img/skills/node.js.svg';
-import mongo from '../../img/skills/mongo.db.svg';
+import php from '../../img/skills/php.svg';
+import sql from '../../img/skills/sql.svg';
+import bootstrap from '../../img/skills/bootstrap.svg';
 
 const Skills = () => {
     return (
@@ -51,17 +52,24 @@ const Skills = () => {
                 </div>
                 <div className="skills_item">
                     <div className="skills_item__icon">
-                        <img src={node} alt="Node.js" />
+                        <img src={php} alt="Php" />
                     </div>
-                    <div className="skills_item__title">Node.js</div>
-                    <div className="skills_item__desc">This platform allows you to create a backend for your product - the "brains" that will perform actions that the user doesn't see</div>
+                    <div className="skills_item__title">PHP</div>
+                    <div className="skills_item__desc">It allows you to interact with databases, manage user sessions, handle forms, process data, and more.</div>
                 </div>
                 <div className="skills_item">
                     <div className="skills_item__icon">
-                        <img src={mongo} alt="mongo.db" />
+                        <img src={sql} alt="SQL" />
                     </div>
-                    <div className="skills_item__title">Mongo.db</div>
-                    <div className="skills_item__desc">This is a non-relational database that will store your website or application data</div>
+                    <div className="skills_item__title">SQL</div>
+                    <div className="skills_item__desc">It allows you to retrieve, insert, update, and delete data, create and modify database structures, manage user permissions, and perform complex queries to analyze and process data.</div>
+                </div>
+                <div className="skills_item">
+                    <div className="skills_item__icon">
+                        <img src={bootstrap} alt="Bootstrap" />
+                    </div>
+                    <div className="skills_item__title">Bootstrap</div>
+                    <div className="skills_item__desc">It provides pre-designed CSS styles, components, and JavaScript plugins, allowing you to quickly build layouts, navigation bars, buttons, forms, and more with minimal effort.</div>
                 </div>
             </div>
         </div>
