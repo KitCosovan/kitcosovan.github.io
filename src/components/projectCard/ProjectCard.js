@@ -1,9 +1,9 @@
 import './projectCard.scss';
 
 import temp from '../../img/temp.png';
-import weatherApp from '../../img/weatherApp.png';
 import onlineStore from '../../img/onlineStore.png';
 import marvelBase from '../../img/marvelBase.png';
+import framework from '../../img/framework.jpg';
 
 const ProjectCard = () => {
     return (
@@ -26,17 +26,15 @@ const ProjectCard = () => {
 
             <div className="project">
                 <div className="project_img">
-                    <img src={weatherApp} alt="project template" />
+                    <img src={framework} alt="project template" />
                 </div>
                 <div className="project_stack">
-                    <div className="project_stack__tag">Pure JS</div>
-                    <div className="project_stack__tag">HTML+CSS</div>
+                    <div className="project_stack__tag">php</div>
                 </div>
-                <div className="project_title">Weather App</div>
-                <div className="project_desc">Unfortunately this project has not yet been finalized. I am currently at the stage of creating an adaptive layout. I also need to finalize the work with third-party API.</div>
+                <div className="project_title">Base Frame</div>
+                <div className="project_desc">My personal framework for quick website building. Based on the MVC pattern. Easy to use, allows you to quickly solve lightweight tasks.</div>
                 <div className="project_btns">
-                    <div className="project_demo"><a href="https://kitcosovan.github.io/weatherApp.github.io/" target='blank'>Demo &lt;~&gt;</a></div>
-                    <div className="project_github"><a href="https://github.com/KitCosovan/weatherApp.github.io" target='blank'>GitHub &ge;</a></div>
+                    <div className="project_github"><a href="https://github.com/KitCosovan/frameworkPHP" target='blank'>GitHub &ge;</a></div>
                 </div>
             </div>
 

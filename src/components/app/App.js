@@ -8,6 +8,8 @@ import HeaderMenu from '../headerMenu/HeaderMenu';
 import HomePage from '../pages/homePage/HomePage';
 import WorksPage from '../pages/worksPage/WorksPage';
 import Footer from '../footer/Footer';
+import ContactPage from '../pages/contactPage/contactPage';
+import AboutPage from '../pages/aboutPage/AboutPage';
 
 const App = () => {
 
@@ -32,6 +34,16 @@ const App = () => {
               <Route path='/works' element={
                 <CSSTransition key="works" timeout={500} classNames="fade">
                   <WorksPage isVisible={isVisible} />
+                </CSSTransition>
+              } />
+              <Route path='/about' element={
+                <CSSTransition key="about" timeout={500} classNames="fade">
+                  <AboutPage />
+                </CSSTransition>
+              } />
+              <Route path='/contacts' element={
+                <CSSTransition key="contacts" timeout={500} classNames="fade">
+                  <ContactPage />
                 </CSSTransition>
               } />
             </Routes>

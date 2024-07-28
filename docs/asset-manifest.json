@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a9409dbd.css",
-    "main.js": "/static/js/main.8b027ef2.js",
-    "static/media/weatherApp.png": "/static/media/weatherApp.d54c21f30e007c47de50.png",
+    "main.css": "/static/css/main.583fbc57.css",
+    "main.js": "/static/js/main.3d25b6c0.js",
     "static/media/marvelBase.png": "/static/media/marvelBase.d75146fb80136325a047.png",
     "static/media/onlineStore.png": "/static/media/onlineStore.fcdeafadd844fd2b19c6.png",
     "static/media/second.png": "/static/media/second.eaaa94fab00c65665814.png",
@@ -17,11 +16,11 @@
     "static/media/js.svg": "/static/media/js.656b841c79fca81fe0cd5e69458ae05b.svg",
     "static/media/sql.svg": "/static/media/sql.43777a1bd18a4840b42a0a9b49faff90.svg",
     "index.html": "/index.html",
-    "main.a9409dbd.css.map": "/static/css/main.a9409dbd.css.map",
-    "main.8b027ef2.js.map": "/static/js/main.8b027ef2.js.map"
+    "main.583fbc57.css.map": "/static/css/main.583fbc57.css.map",
+    "main.3d25b6c0.js.map": "/static/js/main.3d25b6c0.js.map"
   },
   "entrypoints": [
-    "static/css/main.a9409dbd.css",
-    "static/js/main.8b027ef2.js"
+    "static/css/main.583fbc57.css",
+    "static/js/main.3d25b6c0.js"
   ]
 }

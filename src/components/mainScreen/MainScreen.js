@@ -23,7 +23,7 @@ const MainScreen = ({ isVisible }) => {
             <div className="mainScreen_info" style={(isVisible && is576Max) ? inline_style_for_s : isVisible ? inline_style_for_xl : null}>
                 <div className="mainScreen_title">Hello! My name is Kit Cosovan and I'm a <span>web-developer</span> from Chisinau.</div>
                 <div className="mainScreen_subtitle">I build high quality web applications. Take a look around here to familiarize yourself with my work.</div>
-                <button className="mainScreen_btn">Contact me!</button>
+                <a href="#contact"><button className="mainScreen_btn">Contact me!</button></a>
             </div>
             <div className="mainScreen_images">
                 <div className="mainScreen_photo">

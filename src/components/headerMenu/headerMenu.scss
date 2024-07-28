@@ -41,6 +41,7 @@
         list-style: none;
         position: relative;
         padding: 0;
+        top: 25px;
         &::after {
             content: "";
             cursor: pointer;
@@ -48,15 +49,17 @@
             position: absolute;
             width: 5px;
             height: 5px;
+            transition: all 0.5s ease-out;
             border-right: solid 2px $text-regular;
             border-bottom: solid 2px $text-regular;
             transform: translate(10px, 10px) rotate(45deg);
             right: -5px;
-            top: -5px;
+            top: 0px;
         }
         &_item {
             cursor: pointer;
             color: $text-regular;
+            margin-top: 5px;
         }
     }
 }
@@ -66,7 +69,17 @@
 }
 
 .hide {
-    display: none;
+    opacity: 0%;
+    transition: all 0.3s ease-out;
+}
+.active-bar {
+    opacity: 100%;
+    transition: all 0.3s ease-out;
+}
+.menu_lang.active-lang {
+    &::after {
+        transform: translate(10px, 13px) rotate(-135deg);
+    }
 }
 
 a {
