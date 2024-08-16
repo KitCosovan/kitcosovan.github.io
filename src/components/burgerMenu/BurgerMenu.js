@@ -26,10 +26,10 @@ const BurgerMenu = ({ handleSwitchVisible }) => {
             </div>
             <div className={`burgerMenu_list ${menu_class}`}>
                 <ul className="burgerMenu_menu">
-                        <li className='burgerMenu_menu__item'><NavLink to={'/'} className={({isActive}) => isActive ? 'active' : ''}><span>#</span>home</NavLink></li>
-                        <li className='burgerMenu_menu__item'><NavLink to={'/works'} className={({isActive}) => isActive ? 'active' : ''}><span>#</span>works</NavLink></li>
-                        <li className="burgerMenu_menu__item"><span>#</span>about-me</li>
-                        <li className="burgerMenu_menu__item"><span>#</span>contacts</li>
+                        <li className='burgerMenu_menu__item' onClick={() => {handleClick(); handleSwitchVisible()}}><NavLink to={'/'} className={({isActive}) => isActive ? 'active' : ''}><span>#</span>home</NavLink></li>
+                        <li className='burgerMenu_menu__item' onClick={() => {handleClick(); handleSwitchVisible()}}><NavLink to={'/works'} className={({isActive}) => isActive ? 'active' : ''}><span>#</span>works</NavLink></li>
+                        <li className="burgerMenu_menu__item" onClick={() => {handleClick(); handleSwitchVisible()}}><NavLink to={'/about'} className={({isActive}) => isActive ? 'active' : ''}><span>#</span>about-me</NavLink></li>
+                        <li className="burgerMenu_menu__item" onClick={() => {handleClick(); handleSwitchVisible()}}><NavLink to={'/contacts'} className={({isActive}) => isActive ? 'active' : ''}><span>#</span>contacts</NavLink></li>
                 </ul>
                 <ul className="burgerMenu_lang">
                     <li className="burgerMenu_lang_item active">EN</li>
