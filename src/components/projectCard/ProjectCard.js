@@ -47,7 +47,7 @@ const ProjectCard = () => {
                     <div className="project_stack__tag">HTML+CSS</div>
                 </div>
                 <div className="project_title">Online shoes store</div>
-                <div className="project_desc">The project I'm working on at the moment.</div>
+                <div className="project_desc">One of the first projects on React.</div>
                 <div className="project_btns">
                     <div className="project_demo"><a href="https://kitcosovan.github.io/mdStore.github.io/" target='blank'>Demo &lt;~&gt;</a></div>
                     <div className="project_github"><a href="https://github.com/KitCosovan/mdStore.github.io" target='blank'>GitHub &ge;</a></div>
@@ -65,7 +65,6 @@ const ProjectCard = () => {
                 <div className="project_title">Marvel Base</div>
                 <div className="project_desc">Work with API.</div>
                 <div className="project_btns">
-                    <div className="project_demo"><a href="https://kitcosovan.github.io/marvelBase.github.io/" target='blank'>Demo &lt;~&gt;</a></div>
                     <div className="project_github"><a href="https://github.com/KitCosovan/marvelBase.github.io/tree/main" target='blank'>GitHub &ge;</a></div>
                 </div>
             </div>

@@ -8,6 +8,7 @@ import react from '../../img/skills/react.svg';
 import php from '../../img/skills/php.svg';
 import sql from '../../img/skills/sql.svg';
 import bootstrap from '../../img/skills/bootstrap.svg';
+import tsc from '../../img/skills/typescript-svgrepo-com.svg';
 
 const Skills = () => {
     return (
@@ -38,10 +39,10 @@ const Skills = () => {
                 </div>
                 <div className="skills_item">
                     <div className="skills_item__icon">
-                        <img src={jquery} alt="jQuery" />
+                        <img src={tsc} alt="TypeScript" />
                     </div>
-                    <div className="skills_item__title">jQuery</div>
-                    <div className="skills_item__desc">The Jquery library will speed up development. We will not integrate it into the project without necessity, but we have the skill to work with it</div>
+                    <div className="skills_item__title">TypeScript</div>
+                    <div className="skills_item__desc">TypeScript is a programming language that extends JavaScript by adding static types.</div>
                 </div>
                 <div className="skills_item">
                     <div className="skills_item__icon">
@@ -49,6 +50,13 @@ const Skills = () => {
                     </div>
                     <div className="skills_item__title">React</div>
                     <div className="skills_item__desc">This library allows you to create web applications. We can create the most interactive product exactly for your purposes</div>
+                </div>
+                <div className="skills_item">
+                    <div className="skills_item__icon">
+                        <img src={jquery} alt="jQuery" />
+                    </div>
+                    <div className="skills_item__title">jQuery</div>
+                    <div className="skills_item__desc">The Jquery library will speed up development. We will not integrate it into the project without necessity, but we have the skill to work with it</div>
                 </div>
                 <div className="skills_item">
                     <div className="skills_item__icon">
