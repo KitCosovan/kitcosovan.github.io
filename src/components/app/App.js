@@ -15,7 +15,7 @@ import AboutPage from '../pages/aboutPage/AboutPage';
 const App = () => {
 
   const [isVisible, setIsVisible] = useState(false);
-  const [contextValue, setContextValue] = useState("");
+  const [contextValue, setContextValue] = useState("en");
 
   useEffect(() => {
     setContextValue("en");
