@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.583fbc57.css",
-    "main.js": "/static/js/main.3d25b6c0.js",
+    "main.js": "/static/js/main.d408de4d.js",
     "static/media/marvelBase.png": "/static/media/marvelBase.d75146fb80136325a047.png",
     "static/media/onlineStore.png": "/static/media/onlineStore.fcdeafadd844fd2b19c6.png",
     "static/media/second.png": "/static/media/second.eaaa94fab00c65665814.png",
@@ -12,15 +12,16 @@
     "static/media/html5.svg": "/static/media/html5.bdd152ce4d7401871633074c9119a020.svg",
     "static/media/bootstrap.svg": "/static/media/bootstrap.d67d7c522fb80296ccd5a75204a6674e.svg",
     "static/media/php.svg": "/static/media/php.3768b9bf71b82e8e74685a5a1cea5f8e.svg",
+    "static/media/typescript-svgrepo-com.svg": "/static/media/typescript-svgrepo-com.ed733ce4c38f00b25ed7f1989b021876.svg",
     "static/media/css3.svg": "/static/media/css3.a9552a9d9a497cf070da8d72d6862ac3.svg",
     "static/media/js.svg": "/static/media/js.656b841c79fca81fe0cd5e69458ae05b.svg",
     "static/media/sql.svg": "/static/media/sql.43777a1bd18a4840b42a0a9b49faff90.svg",
     "index.html": "/index.html",
     "main.583fbc57.css.map": "/static/css/main.583fbc57.css.map",
-    "main.3d25b6c0.js.map": "/static/js/main.3d25b6c0.js.map"
+    "main.d408de4d.js.map": "/static/js/main.d408de4d.js.map"
   },
   "entrypoints": [
     "static/css/main.583fbc57.css",
-    "static/js/main.3d25b6c0.js"
+    "static/js/main.d408de4d.js"
   ]
 }
