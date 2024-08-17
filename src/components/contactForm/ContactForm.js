@@ -1,10 +1,12 @@
 import './contactForm.scss';
 
-import { useContext } from 'react';
+import { useContext, useRef } from 'react';
 
 import LangContext from '../context/context';
 
 import { useMediaQuery } from 'react-responsive';
+
+import emailjs from '@emailjs/browser';
 
 const ContactForm = ({ isVisible }) => {
 
@@ -14,6 +16,8 @@ const ContactForm = ({ isVisible }) => {
     const is768Min = useMediaQuery({ query: '(min-width: 768px)' });
     const is992Max = useMediaQuery({ query: '(max-width: 992px)' });
     let svgSize = '100px';
+
+    const form = useRef();
 
     const { contextValue } = useContext(LangContext);
 
@@ -68,6 +72,22 @@ const ContactForm = ({ isVisible }) => {
         return translations[contextValue][arg];
     }
 
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('service_ngnmoop', 'template_a4saa17', form.current, {
+            publicKey: '2D55E4JvAfrtAafZn',
+            })
+            .then(() => {
+                console.log('SUCCESS!');
+                form.current.reset();
+            },
+            (error) => {
+                console.log('FAILED...', error.text);
+            },
+            );
+    };
 
     return (
         <div className="contacts" style={(isVisible && is576Max) ? inline_style_for_s : isVisible ? inline_style_for_xl : null}>
@@ -133,17 +153,17 @@ const ContactForm = ({ isVisible }) => {
                     </div> */}
                 </div>
 
-                <form action="#" className="contacts__form">
+                <form action="#" className="contacts__form" ref={form} onSubmit={sendEmail}>
                     <div className="contacts__input">
-                        <input required name="name" id="name" type="text" />
+                        <input required name="user_name" id="name" type="text" />
                         <label htmlFor="name">{changeLang("name")}</label>
                     </div>
                     <div className="contacts__input">
-                        <input required name="email" id="email" type="email" />
+                        <input required name="user_email" id="email" type="email" />
                         <label htmlFor="email">{changeLang("email")}</label>
                     </div>
                     <div className="contacts__textarea">
-                        <textarea name="text" id="text"></textarea>
+                        <textarea name="message" id="text"></textarea>
                         <label htmlFor="text">{changeLang("message")}</label>
                     </div>
 

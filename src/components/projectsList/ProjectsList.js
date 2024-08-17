@@ -1,5 +1,7 @@
 import './projectsList.scss';
 
+import { NavLink } from 'react-router-dom';
+
 import ProjectCard from '../projectCard/ProjectCard';
 import { useContext } from 'react';
 import LangContext from '../context/context';
@@ -27,7 +29,7 @@ const ProjectsList = () => {
         <div className="wrap">
             <div className="wrap_title"><span>#</span>{translations[contextValue]["projects"]}</div>
             <div className="wrap_divider"></div>
-            <div className="wrap_view">{translations[contextValue]["btn"]} ~~&gt;</div>
+            <div className="wrap_view"><NavLink to={'/works'}>{translations[contextValue]["btn"]} ~~&gt;</NavLink></div>
             <div className="projects">
                 <ProjectCard/>
             </div>
