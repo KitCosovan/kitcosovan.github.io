@@ -1,9 +1,9 @@
 import ContactForm from '../../contactForm/ContactForm';
 
-const ContactPage = () => {
+const ContactPage = ({ isVisible }) => {
     return (
         <>
-            <ContactForm/>
+            <ContactForm isVisible={isVisible}/>
         </>
     )
 }

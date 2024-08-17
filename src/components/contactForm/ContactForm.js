@@ -1,8 +1,12 @@
 import './contactForm.scss';
 
+import { useContext } from 'react';
+
+import LangContext from '../context/context';
+
 import { useMediaQuery } from 'react-responsive';
 
-const ContactForm = () => {
+const ContactForm = ({ isVisible }) => {
 
     const is576Max = useMediaQuery({ query: '(max-width: 576px)' });
     const is576Min = useMediaQuery({ query: '(min-width: 576px)' });
@@ -10,6 +14,8 @@ const ContactForm = () => {
     const is768Min = useMediaQuery({ query: '(min-width: 768px)' });
     const is992Max = useMediaQuery({ query: '(max-width: 992px)' });
     let svgSize = '100px';
+
+    const { contextValue } = useContext(LangContext);
 
     if (is768Min && is992Max) {
         svgSize = '60px';
@@ -23,12 +29,52 @@ const ContactForm = () => {
         svgSize = '50px'
     }
 
+    const inline_style_for_xl = {
+        marginTop: '90px'
+    }
+
+    const inline_style_for_s = {
+        marginTop: '240px'
+    }
+
+    const translations = {
+        "en": {
+            title: "contacts",
+            subtitle: "Contact me in a way that's convenient for you:",
+            name: "Your name",
+            email: "Your email",
+            message: "Your message",
+            btn: "Send me a message"
+        },
+        "ru": {
+            title: "контакты",
+            subtitle: "Свяжитесь со мной удобным для вас способом:",
+            name: "Ваше имя",
+            email: "Ваш email",
+            message: "Ваше сообщение",
+            btn: "Отправьте мне сообщение"
+        },
+        "ro": {
+            title: "contacte",
+            subtitle: "Contactați-mă într-un mod convenabil pentru dvs.:",
+            name: "Numele dvs.",
+            email: "Adresa dvs. de e-mail",
+            message: "Mesajul dvs.",
+            btn: "Trimiteți-mi un mesaj"
+        }
+    }
+
+    const changeLang = (arg) => {
+        return translations[contextValue][arg];
+    }
+
+
     return (
-        <div className="contacts">
+        <div className="contacts" style={(isVisible && is576Max) ? inline_style_for_s : isVisible ? inline_style_for_xl : null}>
             <a name='contact'></a>
-            <div className="contacts_title"><span>#</span>contacts</div>
+            <div className="contacts_title"><span>#</span>{changeLang("title")}</div>
             <div className="contacts_divider"></div>
-            <div className="contacts_subtitle">Contact me in a way that's convenient for you:</div>
+            <div className="contacts_subtitle">{changeLang("subtitle")}</div>
             <div className="contacts_connect">
                 <div className="contacts_social">
                     <a href="https://t.me/KitLanskih" target='blank'>
@@ -90,18 +136,18 @@ const ContactForm = () => {
                 <form action="#" className="contacts__form">
                     <div className="contacts__input">
                         <input required name="name" id="name" type="text" />
-                        <label htmlFor="name">Your name</label>
+                        <label htmlFor="name">{changeLang("name")}</label>
                     </div>
                     <div className="contacts__input">
                         <input required name="email" id="email" type="email" />
-                        <label htmlFor="email">Your email</label>
+                        <label htmlFor="email">{changeLang("email")}</label>
                     </div>
                     <div className="contacts__textarea">
                         <textarea name="text" id="text"></textarea>
-                        <label htmlFor="text">Your message</label>
+                        <label htmlFor="text">{changeLang("message")}</label>
                     </div>
 
-                    <button className="contacts_btn">Send me a message</button>
+                    <button className="contacts_btn">{changeLang("btn")}</button>
                 </form>
             </div>
         </div>

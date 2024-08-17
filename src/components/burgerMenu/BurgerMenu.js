@@ -27,7 +27,7 @@ const BurgerMenu = ({ handleSwitchVisible }) => {
         menu_class = 'visible';
     }
 
-    /* const translations = {
+    const translations = {
         "en": {
             name: "Kit Cosovan",
             homeLink: "home",
@@ -53,7 +53,7 @@ const BurgerMenu = ({ handleSwitchVisible }) => {
 
     const changeLang = (arg) => {
         return translations[contextValue][arg];
-    } */
+    }
 
     return (
         <div className="burgerMenu">
@@ -62,10 +62,10 @@ const BurgerMenu = ({ handleSwitchVisible }) => {
             </div>
             <div className={`burgerMenu_list ${menu_class}`}>
                 <ul className="burgerMenu_menu">
-                        <li className='burgerMenu_menu__item' onClick={() => {handleClick(); handleSwitchVisible()}}><NavLink to={'/'} className={({isActive}) => isActive ? 'active' : ''}><span>#</span>home</NavLink></li>
-                        <li className='burgerMenu_menu__item' onClick={() => {handleClick(); handleSwitchVisible()}}><NavLink to={'/works'} className={({isActive}) => isActive ? 'active' : ''}><span>#</span>works</NavLink></li>
-                        <li className="burgerMenu_menu__item" onClick={() => {handleClick(); handleSwitchVisible()}}><NavLink to={'/about'} className={({isActive}) => isActive ? 'active' : ''}><span>#</span>about-me</NavLink></li>
-                        <li className="burgerMenu_menu__item" onClick={() => {handleClick(); handleSwitchVisible()}}><NavLink to={'/contacts'} className={({isActive}) => isActive ? 'active' : ''}><span>#</span>contacts</NavLink></li>
+                        <li className='burgerMenu_menu__item' onClick={() => {handleClick(); handleSwitchVisible()}}><NavLink to={'/'} className={({isActive}) => isActive ? 'active' : ''}><span>#</span>{changeLang("homeLink")}</NavLink></li>
+                        <li className='burgerMenu_menu__item' onClick={() => {handleClick(); handleSwitchVisible()}}><NavLink to={'/works'} className={({isActive}) => isActive ? 'active' : ''}><span>#</span>{changeLang("worksLink")}</NavLink></li>
+                        <li className="burgerMenu_menu__item" onClick={() => {handleClick(); handleSwitchVisible()}}><NavLink to={'/about'} className={({isActive}) => isActive ? 'active' : ''}><span>#</span>{changeLang("aboutLink")}</NavLink></li>
+                        <li className="burgerMenu_menu__item" onClick={() => {handleClick(); handleSwitchVisible()}}><NavLink to={'/contacts'} className={({isActive}) => isActive ? 'active' : ''}><span>#</span>{changeLang("contactsLink")}</NavLink></li>
                 </ul>
                 <ul className="burgerMenu_lang">
                     <li className={`burgerMenu_lang_item ${contextValue === "en" ? "active" : ""}`} onClick={() => toggleLang("en")}>EN</li>

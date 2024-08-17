@@ -1,9 +1,9 @@
 import About from '../../about/About';
 
-const AboutPage = () => {
+const AboutPage = ({ isVisible }) => {
     return (
         <>
-            <About/>
+            <About isVisible={isVisible}/>
         </>
     )
 }

@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.583fbc57.css",
-    "main.js": "/static/js/main.d408de4d.js",
+    "main.js": "/static/js/main.841a0b9d.js",
     "static/media/marvelBase.png": "/static/media/marvelBase.d75146fb80136325a047.png",
     "static/media/onlineStore.png": "/static/media/onlineStore.fcdeafadd844fd2b19c6.png",
-    "static/media/second.png": "/static/media/second.eaaa94fab00c65665814.png",
-    "static/media/first.png": "/static/media/first.b0c017f1e97c3feaae55.png",
+    "static/media/first.png": "/static/media/first.0f5c34b7c95a57468b02.png",
+    "static/media/second.png": "/static/media/second.0d36c2b8207318c92281.png",
     "static/media/temp.png": "/static/media/temp.bb5d3b7debc9ddfbb710.png",
     "static/media/react.svg": "/static/media/react.49880c79b4cf6fac6eeb1ff6f1aa1c95.svg",
     "static/media/jquery.svg": "/static/media/jquery.c1a4b375ce7e496f34e5af671234a0a8.svg",
@@ -18,10 +18,10 @@
     "static/media/sql.svg": "/static/media/sql.43777a1bd18a4840b42a0a9b49faff90.svg",
     "index.html": "/index.html",
     "main.583fbc57.css.map": "/static/css/main.583fbc57.css.map",
-    "main.d408de4d.js.map": "/static/js/main.d408de4d.js.map"
+    "main.841a0b9d.js.map": "/static/js/main.841a0b9d.js.map"
   },
   "entrypoints": [
     "static/css/main.583fbc57.css",
-    "static/js/main.d408de4d.js"
+    "static/js/main.841a0b9d.js"
   ]
 }

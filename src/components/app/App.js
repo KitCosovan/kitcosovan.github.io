@@ -45,12 +45,12 @@ const App = () => {
                 } />
                 <Route path='/about' element={
                   <CSSTransition key="about" timeout={500} classNames="fade">
-                    <AboutPage />
+                    <AboutPage isVisible={isVisible} />
                   </CSSTransition>
                 } />
                 <Route path='/contacts' element={
                   <CSSTransition key="contacts" timeout={500} classNames="fade">
-                    <ContactPage />
+                    <ContactPage isVisible={isVisible}/>
                   </CSSTransition>
                 } />
               </Routes>
