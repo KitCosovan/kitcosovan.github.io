@@ -27,4 +27,4 @@ The project is developed and maintained by [Kit Cosovan](https://github.com/KitC
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE.txt).
