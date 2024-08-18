@@ -5,7 +5,7 @@ import BurgerMenu from '../burgerMenu/BurgerMenu';
 import { useState, useContext } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { NavLink } from 'react-router-dom';
-import LangContext from '../context/context';
+import { LangContext } from '../context/context';
 
 const HeaderMenu = ({ handleSwitchVisible }) => {
 

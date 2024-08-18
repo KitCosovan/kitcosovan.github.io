@@ -2,7 +2,7 @@ import './mainScreen.scss';
 
 import { useContext } from 'react';
 
-import LangContext from '../context/context';
+import { LangContext } from '../context/context';
 
 import { useMediaQuery } from 'react-responsive';
 

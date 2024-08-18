@@ -2,12 +2,7 @@ import './projectCard.scss';
 
 import { useContext } from 'react';
 
-import LangContext from '../context/context';
-
-import temp from '../../img/temp.png';
-import onlineStore from '../../img/onlineStore.png';
-import marvelBase from '../../img/marvelBase.png';
-import framework from '../../img/framework.jpg';
+import { LangContext, useProjects } from '../context/context';
 
 const ProjectCard = () => {
 
@@ -20,6 +15,8 @@ const ProjectCard = () => {
     const changeText = (arg) => {
         return translations[contextValue][arg]["text"];
     }
+
+    const projects = useProjects();
 
     const translations = {
         "en": {
@@ -80,66 +77,29 @@ const ProjectCard = () => {
 
     return (
         <>
-            <div className="project">
-                <div className="project_img">
-                    <img src={temp} alt="project template" />
+            {Object.entries(projects).map(([key, project]) => (
+                <div className="project" key={key}>
+                    <div className="project_img">
+                        <img src={project.img} alt="project template" />
+                    </div>
+                    <div className="project_stack">
+                        {project.tags.map((tag) => (
+                            <div className="project_stack__tag">{tag}</div>
+                        ))}
+                    </div>
+                    <div className="project_title">{changeTitle(key)}</div>
+                    <div className="project_desc">{changeText(key)}</div>
+                    <div className="project_btns">
+                        {Object.entries(project.links).map(([key, link]) => (
+                            key === "demo" ? (
+                                <div className="project_demo"><a href={link} target='blank'>Demo &lt;~&gt;</a></div>
+                            ) : (
+                                <div className="project_github"><a href={link} target='blank'>GitHub &ge;</a></div>
+                            )
+                            ))}
+                    </div>
                 </div>
-                <div className="project_stack">
-                    <div className="project_stack__tag">React</div>
-                    <div className="project_stack__tag">HTML+CSS</div>
-                </div>
-                <div className="project_title">{changeTitle("portfolio")}</div>
-                <div className="project_desc">{changeText("portfolio")}</div>
-                <div className="project_btns">
-                    <div className="project_demo"><a href="https://kitcosovan.github.io/" target='blank'>Demo &lt;~&gt;</a></div>
-                    <div className="project_github"><a href="https://github.com/KitCosovan/kitcosovan.github.io" target='blank'>GitHub &ge;</a></div>
-                </div>
-            </div>
-
-            <div className="project">
-                <div className="project_img">
-                    <img src={framework} alt="project template" />
-                </div>
-                <div className="project_stack">
-                    <div className="project_stack__tag">php</div>
-                </div>
-                <div className="project_title">{changeTitle("framework")}</div>
-                <div className="project_desc">{changeText("framework")}</div>
-                <div className="project_btns">
-                    <div className="project_github"><a href="https://github.com/KitCosovan/frameworkPHP" target='blank'>GitHub &ge;</a></div>
-                </div>
-            </div>
-
-            <div className="project">
-                <div className="project_img">
-                    <img src={onlineStore} alt="project template" />
-                </div>
-                <div className="project_stack">
-                    <div className="project_stack__tag">React</div>
-                    <div className="project_stack__tag">HTML+CSS</div>
-                </div>
-                <div className="project_title">{changeTitle("mdstore")}</div>
-                <div className="project_desc">{changeText("mdstore")}</div>
-                <div className="project_btns">
-                    <div className="project_demo"><a href="https://kitcosovan.github.io/mdStore.github.io/" target='blank'>Demo &lt;~&gt;</a></div>
-                    <div className="project_github"><a href="https://github.com/KitCosovan/mdStore.github.io" target='blank'>GitHub &ge;</a></div>
-                </div>
-            </div>
-
-            <div className="project">
-                <div className="project_img">
-                    <img src={marvelBase} alt="project template" />
-                </div>
-                <div className="project_stack">
-                    <div className="project_stack__tag">React</div>
-                    <div className="project_stack__tag">HTML+CSS</div>
-                </div>
-                <div className="project_title">{changeTitle("marvel")}</div>
-                <div className="project_desc">{changeText("marvel")}</div>
-                <div className="project_btns">
-                    <div className="project_github"><a href="https://github.com/KitCosovan/marvelBase.github.io/tree/main" target='blank'>GitHub &ge;</a></div>
-                </div>
-            </div>
+            ))}
         </>
     )
 }

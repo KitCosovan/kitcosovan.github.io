@@ -3,7 +3,7 @@ import './burgerMenu.scss';
 import { useState, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import LangContext from '../context/context';
+import { LangContext } from '../context/context';
 
 const BurgerMenu = ({ handleSwitchVisible }) => {
 

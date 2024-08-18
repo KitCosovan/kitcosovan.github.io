@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 import ProjectCard from '../projectCard/ProjectCard';
 import { useContext } from 'react';
-import LangContext from '../context/context';
+import { LangContext } from '../context/context';
 
 const ProjectsList = () => {
 

@@ -2,7 +2,7 @@ import './contactForm.scss';
 
 import { useContext, useRef } from 'react';
 
-import LangContext from '../context/context';
+import { LangContext } from '../context/context';
 
 import { useMediaQuery } from 'react-responsive';
 

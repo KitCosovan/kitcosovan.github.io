@@ -2,7 +2,7 @@ import './skills.scss'
 
 import { useContext } from 'react';
 
-import LangContext from '../context/context';
+import { LangContext } from '../context/context';
 
 import html from '../../img/skills/html5.svg';
 import css from '../../img/skills/css3.svg';
